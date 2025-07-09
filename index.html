@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Happy Birthday Bristi</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;600&display=swap');
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background: url('bristi_birthday_bg.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            text-align: center;
+            overflow: hidden;
+        }
+        .container {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 50px 20px;
+            margin: 0 auto;
+            max-width: 800px;
+            border-radius: 20px;
+            margin-top: 5vh;
+        }
+        .greeting {
+            font-family: 'Great Vibes', cursive;
+            font-size: 4em;
+            color: #ffdd57;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .message {
+            font-size: 1.5em;
+            margin-top: 20px;
+            animation: fadeIn 3s ease-in-out;
+        }
+        .button {
+            margin-top: 30px;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 10px;
+            background: #ff69b4;
+            color: white;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: background 0.3s;
+        }
+        .button:hover {
+            background: #ff1493;
+        }
+        .surprise {
+            display: none;
+            margin-top: 30px;
+            font-size: 1.5em;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .surprise a {
+            display: inline-block;
+            margin-top: 15px;
+            text-decoration: none;
+            color: #ffd700;
+            background-color: #800080;
+            padding: 10px 20px;
+            border-radius: 10px;
+        }
+        .emoji {
+            font-size: 2em;
+            margin-top: 30px;
+            animation: float 3s infinite ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+    </style>
+</head>
+<body>
+    <!-- <audio autoplay loop>
+        <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mp3">
+    </audio> -->
+
+    <div class="container">
+        <button class="music-button" onclick="document.getElementById('bg-music').play()">🎵 Play Music</button>
+        <audio id="bg-music" loop>
+            <source src="hbd.mp3" type="audio/mp3">
+        </audio>
+        <div class="greeting">🎉 Happy Birthday Bristi 🎉</div>
+        <div class="message">You are special to me in ways words can't express.</div>
+        <button class="button" onclick="document.querySelector('.surprise').style.display='block'">Tap to Reveal 💝</button>
+        <div class="surprise">
+            💖 You mean more to me every single day! <br> 🌹🌸✨<br>
+            <a href="love me\index.html" target="_blank">Click here for your surprise 🌈</a>
+        </div>
+        <div class="emoji">🐻💐❤️🎂✨🌸🦋🌈🍫🎁</div>
+    </div>
+
+    <script>
+        // Confetti script
+        let confettiScript = document.createElement('script');
+        confettiScript.src = "https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js";
+        confettiScript.onload = () => {
+            setInterval(() => {
+                confetti({
+                    particleCount: 150,
+                    spread: 80,
+                    origin: { y: 0.6 }
+                });
+            }, 3000);
+        };
+        document.head.appendChild(confettiScript);
+    </script>
+</body>
+</html>
